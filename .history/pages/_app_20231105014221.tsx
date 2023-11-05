@@ -8,9 +8,10 @@ function HomePage() {
     <React.StrictMode>
       <StyleProvider>
         <ThemePicker variant="light">
-          <HelloWorld />
+          
         </ThemePicker>
       </StyleProvider>
+      <HelloWorld />
     </React.StrictMode>
   );
 }

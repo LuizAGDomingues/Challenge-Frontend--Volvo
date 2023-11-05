@@ -6,11 +6,8 @@ import { StyleProvider, ThemePicker } from 'vcc-ui';
 function HomePage() {
   return (
     <React.StrictMode>
-      <StyleProvider>
-        <ThemePicker variant="light">
-          <HelloWorld />
-        </ThemePicker>
-      </StyleProvider>
+       <StyleProvider></StyleProvider>
+      <HelloWorld />
     </React.StrictMode>
   );
 }

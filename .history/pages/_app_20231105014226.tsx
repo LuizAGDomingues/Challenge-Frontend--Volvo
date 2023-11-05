@@ -11,6 +11,7 @@ function HomePage() {
           <HelloWorld />
         </ThemePicker>
       </StyleProvider>
+      
     </React.StrictMode>
   );
 }
