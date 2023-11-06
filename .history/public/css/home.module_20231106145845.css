@@ -1,0 +1,19 @@
+.homeWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+}
+
+.cardsWrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  width: 100%;
+  gap: 1.5rem;
+  overflow: ;
+}
