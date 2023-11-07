@@ -14,6 +14,7 @@ export const Home: React.FC = () => {
     const cardList = document.getElementById('card-list')
     const card = cardList?.firstElementChild
     const cardSize = (card?.clientWidth ?? 0) + 24
+    const scrollSize = cardList?.scrollWidth ?? 0
     const scrollPosition = cardList?.scrollLeft ?? 0
 
     if (scrollPosition >= cardSize) {
@@ -24,7 +25,7 @@ export const Home: React.FC = () => {
   const onClickRight = () => {
     const cardList = document.getElementById('card-list')
     const card = cardList?.firstElementChild
-    const cardSize = (card?.clientWidth ?? 0) + 24
+    const cardSize = card?.clientWidth ?? 0
     const scrollSize = cardList?.scrollWidth ?? 0
     const scrollPosition = cardList?.scrollLeft ?? 0
 

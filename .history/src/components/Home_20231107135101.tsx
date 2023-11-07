@@ -12,26 +12,11 @@ export const Home: React.FC = () => {
 
   const onClickLeft = () => {
     const cardList = document.getElementById('card-list')
-    const card = cardList?.firstElementChild
-    const cardSize = (card?.clientWidth ?? 0) + 24
-    const scrollPosition = cardList?.scrollLeft ?? 0
-
-    if (scrollPosition >= cardSize) {
-      cardList?.scrollTo({ left: scrollPosition - cardSize })
-    }
+    const card = document.fir
+    const cardSize = card.clientWidth
+    const scrollSize = cardList?.scrollWidth
   }
-
-  const onClickRight = () => {
-    const cardList = document.getElementById('card-list')
-    const card = cardList?.firstElementChild
-    const cardSize = (card?.clientWidth ?? 0) + 24
-    const scrollSize = cardList?.scrollWidth ?? 0
-    const scrollPosition = cardList?.scrollLeft ?? 0
-
-    if (scrollPosition + cardSize <= scrollSize) {
-      cardList?.scrollTo({ left: scrollPosition + cardSize })
-    }
-  }
+  const onClickRight = () => {}
 
   return (
     <div className={styles.homeWrapper}>
