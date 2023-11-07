@@ -14,10 +14,12 @@ export const Home: React.FC = () => {
     const cardList = document.getElementById('card-list')
     const card = cardList?.firstElementChild
     const cardSize = (card?.clientWidth ?? 0) + 24
+    const scrollSize = cardList?.scrollWidth ?? 0
     const scrollPosition = cardList?.scrollLeft ?? 0
 
-    if (left) cardList?.scrollTo({ left: scrollPosition - cardSize })
-    else cardList?.scrollTo({ left: scrollPosition + cardSize })
+    if (scrollPosition + cardSize <= scrollSize) {
+      cardList?.scrollTo({ left: scrollPosition + cardSize })
+    }
   }
 
   return (
@@ -30,8 +32,8 @@ export const Home: React.FC = () => {
         })}
       </div>
       <PaginationDesktop
-        onClickLeft={() => onClickNavigate(true)}
-        onClickRight={() => onClickNavigate(false)}
+        onClickLeft={onClickLeft}
+        onClickRight={onClickRight}
       />
     </div>
   )

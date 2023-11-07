@@ -14,6 +14,7 @@ export const Home: React.FC = () => {
     const cardList = document.getElementById('card-list')
     const card = cardList?.firstElementChild
     const cardSize = (card?.clientWidth ?? 0) + 24
+    const scrollSize = cardList?.scrollWidth ?? 0
     const scrollPosition = cardList?.scrollLeft ?? 0
 
     if (left) cardList?.scrollTo({ left: scrollPosition - cardSize })
